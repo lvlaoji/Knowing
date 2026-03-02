@@ -1,0 +1,1464 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>吕加乐 | 单页个人展示</title>
+    <meta
+      name="description"
+      content="温柔大地色系的单页滚动式个人展示：照片轮播、社交链接、点赞与趣味动效。"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Caveat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <div class="bg-parallax" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="topbar" data-reveal style="--d: 40ms">
+      <div class="topbar-inner">
+        <a class="logo" href="#" data-action="reload" aria-label="返回顶部并刷新">
+          <span class="logo-mark" aria-hidden="true">LJ</span>
+          <span class="logo-text">
+            <span class="logo-name">LÜ JIALE</span>
+          </span>
+        </a>
+
+        <div class="topbar-tagline">应无所住而生其心</div>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="打开菜单"
+          aria-expanded="false"
+          aria-controls="topbar-menu"
+        >
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="topbar-menu" aria-label="页面导航">
+          <a class="nav-link" href="#about">关于</a>
+          <a class="nav-link" href="#contact">联系</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="hero" aria-label="主视觉">
+        <div class="hero-inner">
+          <div class="hero-deco hero-deco-left" aria-hidden="true"></div>
+          <div class="hero-deco hero-deco-right" aria-hidden="true"></div>
+
+          <h1 class="title" data-reveal style="--d: 110ms">
+            📸 镜头后的我，和你分享眼中的世界
+          </h1>
+          <p class="subtitle" data-reveal style="--d: 170ms">some moments I cherish</p>
+
+          <div class="mood" data-reveal style="--d: 230ms" aria-live="polite">
+            <span class="mood-pill" aria-hidden="true"></span>
+            <span class="mood-text">今天想喝咖啡</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="carousel-section" aria-label="照片轮播">
+        <div
+          class="carousel-shell"
+          data-reveal
+          style="--d: 290ms"
+          aria-roledescription="carousel"
+          aria-label="照片轮播"
+        >
+          <div class="carousel-bg" aria-hidden="true"></div>
+
+          <div class="carousel-card" tabindex="0">
+            <div class="carousel-media">
+              <img class="slide-img slide-img-current" alt="" />
+              <img class="slide-img slide-img-next" alt="" />
+
+              <button class="like" type="button" aria-label="点赞这张照片">
+                <span class="like-heart" aria-hidden="true">❤</span>
+                <span class="like-count" aria-live="polite">0</span>
+              </button>
+
+              <button class="arrow arrow-left" type="button" aria-label="上一张">
+                <span aria-hidden="true">‹</span>
+              </button>
+              <button class="arrow arrow-right" type="button" aria-label="下一张">
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+
+            <div class="carousel-meta">
+              <p class="caption">
+                <span class="caption-pin" aria-hidden="true"></span>
+                <span class="caption-text"></span>
+              </p>
+            </div>
+
+            <div class="dots" role="tablist" aria-label="轮播指示器"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="social" aria-label="社交媒体链接" data-reveal style="--d: 110ms">
+        <h2 class="section-title">在这些地方也能遇见我 · 吕加乐</h2>
+        <div class="social-grid">
+          <a
+            class="social-item"
+            href="https://www.douyin.com/user/self"
+            target="_blank"
+            rel="noreferrer"
+            data-brand="douyin"
+            aria-label="打开 抖音"
+          >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M15.5 3.2c.4.4.9.7 1.5.9.3.1.6.1 1 .1.4 0 .7.3.7.7v4.6c0 2.1-1.1 3.7-2.9 4.5-.8.4-1.8.5-2.7.5-1.8 0-3.5-.6-4.9-1.6v3.9c0 1.7 0 2.6-.4 3.3a3 3 0 0 1-1.3 1.3c-.7.4-1.6.4-3.3.4-.4 0-.7-.3-.7-.7v-2.2c1.2 0 1.7 0 2-.2.2-.1.3-.3.4-.4.2-.3.2-.8.2-2V6.7c0-.5.4-.9.9-.9H8c.5 0 .9.4.9.9v5.4a6 6 0 0 0 3.8 1.4c.7 0 1.3-.1 1.8-.4 1-.5 1.5-1.3 1.5-2.7V5.4a.7.7 0 0 0-.5-.7c-.6-.2-1.1-.5-1.6-.8a.7.7 0 0 1-.3-.5c0-.4.3-.7.7-.7.3 0 .5.1.7.3Z"
+                />
+              </svg>
+            </span>
+            <span class="social-handle" data-copy="吕加乐（抖音）">抖音 · 吕加乐</span>
+          </a>
+
+          <a
+            class="social-item"
+            href="https://xhslink.com/m/1yqqwvb7Eh7"
+            target="_blank"
+            rel="noreferrer"
+            data-brand="xiaohongshu"
+            aria-label="打开 小红书"
+          >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M7.4 3.6h9.2A4.8 4.8 0 0 1 21.4 8.4v7.2a4.8 4.8 0 0 1-4.8 4.8H7.4a4.8 4.8 0 0 1-4.8-4.8V8.4a4.8 4.8 0 0 1 4.8-4.8Zm1.8 4.4h1.8v2.6h2.0V8.0h1.8v2.6h2.0v1.8h-2.0v2.6h-1.8v-2.6h-2.0v2.6H9.2v-2.6h-2V10.6h2V8.0Z"
+                />
+              </svg>
+            </span>
+            <span class="social-handle" data-copy="小红书：TnT 丶无人岛（458743217）">小红书 · TnT 丶无人岛</span>
+          </a>
+
+          <a
+            class="social-item"
+            href="https://weibo.com/u/5249822190"
+            target="_blank"
+            rel="noreferrer"
+            data-brand="weibo"
+            aria-label="打开 微博"
+          >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M16.5 4.2c2.2.3 3.8 1.7 3.6 3.4-.1.4-.4.6-.8.6-.4-.1-.6-.4-.6-.8.1-.9-.9-1.6-2-1.8-1-.2-1.7.1-1.9.9-.1.4-.4.6-.8.6-.4-.1-.6-.5-.6-.9.4-1.8 2.2-2.7 4.1-2.4Zm-2 3.8c.5-.1.9.2 1 .7.1.4-.2.9-.7 1-3.7.7-6 2.4-6.8 4.7-.4 1.2-1.4 2-2.7 2.3-1.2.3-2.4-.1-3.2-1-.8-.9-1-2.1-.5-3.3 1.2-3.3 5.4-5.4 9.9-6.1Zm-5.4 4.3c.3.2.3.6.1.8-.6.7-.8 1.5-.6 2.2.2.7.8 1.2 1.6 1.5.4.1.6.6.5 1-.2.4-.6.6-1 .5-1.3-.4-2.3-1.3-2.7-2.4-.4-1.1-.1-2.4.8-3.5.2-.3.6-.3.9-.1Zm2.7-.3c1.2.3 2 1.1 2.3 2.1.3 1-.1 2.1-1 3-.3.3-.7.3-1 .1-.3-.3-.3-.7-.1-1 .5-.5.7-1.1.6-1.7-.1-.5-.5-1-1.2-1.1-.4-.1-.7-.5-.6-.9.1-.4.5-.7.9-.5Z"
+                />
+              </svg>
+            </span>
+            <span class="social-handle" data-copy="微博：吕加乐（5249822190）">微博 · 吕加乐</span>
+          </a>
+
+          <a
+            class="social-item"
+            href="https://y.music.163.com/m/user?id=300456035"
+            target="_blank"
+            rel="noreferrer"
+            data-brand="netease"
+            aria-label="打开 网易云音乐"
+          >
+            <span class="social-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path
+                  d="M12 3a8.5 8.5 0 0 1 8.5 8.5c0 4.7-3.8 8.6-8.5 8.6A8.5 8.5 0 0 1 3.5 11c0-1 .8-1.8 1.8-1.8.9 0 1.6.7 1.6 1.6 0 .4-.2.8-.4 1.1a5.2 5.2 0 0 0 4.6 2.8c2.7 0 4.9-2.2 4.9-4.9A4.9 4.9 0 0 0 12 4.8a.8.8 0 0 1-.7-.8c0-.5.4-1 .9-1Z"
+                />
+              </svg>
+            </span>
+            <span class="social-handle" data-copy="网易云音乐：300456035">网易云 · 300456035</span>
+          </a>
+        </div>
+
+        <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+      </section>
+
+      <section class="info" id="about" aria-label="关于" data-reveal style="--d: 140ms">
+        <h2 class="section-title">关于</h2>
+        <p class="info-text">
+          我叫 吕加乐，喜欢用照片记录生活的微光：旅行的风、深夜的灵感、还有那些被忽略的小确幸。
+          这里是一页轻量的作品集，也是一封温柔的自我介绍。
+        </p>
+      </section>
+
+      <section class="info" id="contact" aria-label="联系" data-reveal style="--d: 180ms">
+        <h2 class="section-title">联系</h2>
+        <p class="info-text">
+          你可以通过上面的社交账号找到我，或者把想说的话发到邮箱：
+          <a class="inline-link" href="mailto:1419487057@qq.com">1419487057@qq.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer" data-reveal style="--d: 220ms">
+      © 2026 吕加乐 <span class="sep">|</span> 设计 by 灵感
+    </footer>
+
+    <div class="easter" aria-live="polite" aria-atomic="true" hidden>
+      被你发现了！
+    </div>
+  </body>
+</html>
+
+
+const slides = [
+  {
+    id: "img-9BA9",
+    src: "./IMAGES/9BA9023CE6095B6D647045BC8FA18079.jpg",
+    alt: "我的照片 1",
+    caption: "一些值得反复翻看的瞬间",
+    bg1: "rgba(255, 182, 193, .20)",
+    bg2: "rgba(239, 220, 182, .20)",
+  },
+  {
+    id: "img-67FA",
+    src: "./IMAGES/67FA209F7B0BEF068893CE80357CF98C.jpg",
+    alt: "我的照片 2",
+    caption: "那一天，光刚刚好",
+    bg1: "rgba(152, 221, 202, .20)",
+    bg2: "rgba(255, 182, 193, .14)",
+  },
+  {
+    id: "img-4970",
+    src: "./IMAGES/4970B334B7046770F7A12BD89C1F2B7D.jpg",
+    alt: "我的照片 3",
+    caption: "在路上，心也在路上",
+    bg1: "rgba(239, 220, 182, .22)",
+    bg2: "rgba(152, 221, 202, .16)",
+  },
+  {
+    id: "img-20220513",
+    src: "./IMAGES/IMG_20220513_183351.jpg",
+    alt: "2022-05-13 的一刻",
+    caption: "2022.05.13 傍晚的记忆",
+    bg1: "rgba(255, 182, 193, .16)",
+    bg2: "rgba(46, 46, 46, .08)",
+  },
+  {
+    id: "img-20220603",
+    src: "./IMAGES/IMG_20220603_130437.jpg",
+    alt: "2022-06-03 的一刻",
+    caption: "2022.06.03 午后的日常",
+    bg1: "rgba(239, 220, 182, .22)",
+    bg2: "rgba(152, 221, 202, .16)",
+  },
+  {
+    id: "img-20220605",
+    src: "./IMAGES/IMG_20220605_181308.jpg",
+    alt: "2022-06-05 的一刻",
+    caption: "2022.06.05 傍晚的小情绪",
+    bg1: "rgba(152, 221, 202, .20)",
+    bg2: "rgba(255, 182, 193, .14)",
+  },
+];
+
+const moods = [
+  "今天想喝咖啡",
+  "刚看完一本好书",
+  "想去海边走走",
+  "在整理照片小宇宙",
+  "最近迷上薄荷绿",
+];
+
+const AUTOPLAY_MS = 4000;
+const TRANSITION_MS = 520;
+
+function qs(sel, root = document) {
+  return root.querySelector(sel);
+}
+function qsa(sel, root = document) {
+  return Array.from(root.querySelectorAll(sel));
+}
+
+function clamp(n, min, max) {
+  return Math.max(min, Math.min(max, n));
+}
+
+function isInteractive(el) {
+  if (!el) return false;
+  return Boolean(el.closest("a, button, input, textarea, select, [role='button']"));
+}
+
+function safeScrollToHash(hash) {
+  const id = (hash || "").replace("#", "");
+  const el = id ? document.getElementById(id) : null;
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function setupNav() {
+  const toggle = qs(".nav-toggle");
+  const nav = qs(".nav");
+  if (!toggle || !nav) return;
+
+  const logo = qs(".logo[data-action='reload']");
+  if (logo) {
+    logo.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.setTimeout(() => location.reload(), 120);
+    });
+  }
+
+  const setOpen = (open) => {
+    document.body.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  };
+
+  toggle.addEventListener("click", () => {
+    const open = !document.body.classList.contains("menu-open");
+    setOpen(open);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!document.body.classList.contains("menu-open")) return;
+    if (toggle.contains(e.target) || nav.contains(e.target)) return;
+    setOpen(false);
+  });
+
+  qsa(".nav-link").forEach((a) => {
+    a.addEventListener("click", () => setOpen(false));
+  });
+}
+
+function setupMood() {
+  const el = qs(".mood-text");
+  if (!el) return;
+  let idx = 0;
+  setInterval(() => {
+    idx = (idx + 1) % moods.length;
+    el.textContent = moods[idx];
+  }, 5200);
+}
+
+function loadLikes() {
+  try {
+    const raw = localStorage.getItem("likes:v1");
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (parsed && typeof parsed === "object") return parsed;
+  } catch {
+    // ignore
+  }
+  return {};
+}
+
+function saveLikes(map) {
+  try {
+    localStorage.setItem("likes:v1", JSON.stringify(map));
+  } catch {
+    // ignore
+  }
+}
+
+function setupCarousel() {
+  const shell = qs(".carousel-shell");
+  const card = qs(".carousel-card");
+  const imgCur = qs(".slide-img-current");
+  const imgNext = qs(".slide-img-next");
+  const caption = qs(".caption-text");
+  const prevBtn = qs(".arrow-left");
+  const nextBtn = qs(".arrow-right");
+  const dotsWrap = qs(".dots");
+  const likeBtn = qs(".like");
+  const likeCount = qs(".like-count");
+
+  if (!shell || !card || !imgCur || !imgNext || !caption || !prevBtn || !nextBtn || !dotsWrap) return;
+
+  let index = 0;
+  let timer = null;
+  let paused = false;
+  let transitioning = false;
+
+  const likes = loadLikes();
+
+  const setBg = (s) => {
+    shell.style.setProperty("--bg1", s.bg1);
+    shell.style.setProperty("--bg2", s.bg2);
+  };
+
+  const setLikeUI = () => {
+    const slide = slides[index];
+    const count = Number(likes[slide.id] || 0);
+    if (likeCount) likeCount.textContent = String(count);
+    if (likeBtn) likeBtn.setAttribute("aria-label", `点赞：${slide.caption}`);
+  };
+
+  const setDots = () => {
+    qsa(".dot", dotsWrap).forEach((b, i) => {
+      b.setAttribute("aria-selected", String(i === index));
+      b.tabIndex = i === index ? 0 : -1;
+    });
+  };
+
+  const renderDots = () => {
+    dotsWrap.innerHTML = "";
+    slides.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "dot";
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-label", `跳转到：${s.caption}`);
+      b.setAttribute("aria-selected", String(i === index));
+      b.tabIndex = i === index ? 0 : -1;
+      b.addEventListener("click", () => goTo(i));
+      dotsWrap.appendChild(b);
+    });
+  };
+
+  const applySlideToCurrent = (s) => {
+    imgCur.src = s.src;
+    imgCur.alt = s.alt;
+    caption.textContent = s.caption;
+    setBg(s);
+    setLikeUI();
+    setDots();
+  };
+
+  const goTo = (nextIndex, dir = 1) => {
+    if (transitioning) return;
+    const newIndex = clamp(nextIndex, 0, slides.length - 1);
+    if (newIndex === index) return;
+
+    transitioning = true;
+    shell.classList.add("is-transitioning");
+
+    const nextSlide = slides[newIndex];
+    imgNext.src = nextSlide.src;
+    imgNext.alt = nextSlide.alt;
+    caption.textContent = nextSlide.caption;
+    setBg(nextSlide);
+
+    index = newIndex;
+    setDots();
+    setLikeUI();
+
+    window.setTimeout(() => {
+      imgCur.src = imgNext.src;
+      imgCur.alt = imgNext.alt;
+      shell.classList.remove("is-transitioning");
+      transitioning = false;
+    }, TRANSITION_MS + 30);
+  };
+
+  const next = () => goTo((index + 1) % slides.length, 1);
+  const prev = () => goTo((index - 1 + slides.length) % slides.length, -1);
+
+  const start = () => {
+    stop();
+    timer = window.setInterval(() => {
+      if (!paused && !document.hidden) next();
+    }, AUTOPLAY_MS);
+  };
+  const stop = () => {
+    if (timer) window.clearInterval(timer);
+    timer = null;
+  };
+
+  prevBtn.addEventListener("click", prev);
+  nextBtn.addEventListener("click", next);
+
+  card.addEventListener("mouseenter", () => (paused = true));
+  card.addEventListener("mouseleave", () => (paused = false));
+  card.addEventListener("focusin", () => (paused = true));
+  card.addEventListener("focusout", () => (paused = false));
+
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      prev();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      next();
+    }
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) return;
+    if (!paused) start();
+  });
+
+  if (likeBtn) {
+    likeBtn.addEventListener("click", () => {
+      const slide = slides[index];
+      likes[slide.id] = Number(likes[slide.id] || 0) + 1;
+      saveLikes(likes);
+      setLikeUI();
+      likeBtn.classList.remove("is-popping");
+      // restart animation
+      void likeBtn.offsetWidth;
+      likeBtn.classList.add("is-popping");
+    });
+  }
+
+  renderDots();
+  applySlideToCurrent(slides[index]);
+  start();
+}
+
+function setupSocialCopy() {
+  const toast = qs(".toast");
+  let toastTimer = null;
+
+  const fallbackCopy = (text) => {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.top = "-1000px";
+    ta.style.left = "-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch {
+      ok = false;
+    }
+    ta.remove();
+    return ok;
+  };
+
+  const copyText = async (text) => {
+    const t = text.trim();
+    if (!t) return false;
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(t);
+        return true;
+      }
+    } catch {
+      // ignore and fallback
+    }
+    return fallbackCopy(t);
+  };
+
+  const showToast = (msg) => {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    if (toastTimer) window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => toast.classList.remove("is-on"), 1400);
+  };
+
+  qsa("[data-copy]").forEach((el) => {
+    el.addEventListener("click", async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const text = el.getAttribute("data-copy") || el.textContent || "";
+      const ok = await copyText(text);
+      showToast(ok ? `已复制：${text.trim()}` : "复制失败（浏览器权限或环境限制）");
+    });
+  });
+}
+
+function setupParallax() {
+  let raf = 0;
+  const onScroll = () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = 0;
+      document.documentElement.style.setProperty("--scrollY", `${window.scrollY}px`);
+    });
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+function setupCustomCursor() {
+  const canHover = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (!canHover) return;
+
+  const dot = qs(".cursor-dot");
+  const ring = qs(".cursor-ring");
+  if (!dot || !ring) return;
+
+  document.body.classList.add("has-custom-cursor");
+
+  let x = window.innerWidth / 2;
+  let y = window.innerHeight / 2;
+  let tx = x;
+  let ty = y;
+
+  const move = (e) => {
+    tx = e.clientX;
+    ty = e.clientY;
+  };
+  window.addEventListener("mousemove", move, { passive: true });
+
+  const tick = () => {
+    x += (tx - x) * 0.22;
+    y += (ty - y) * 0.22;
+    dot.style.transform = `translate3d(${x}px, ${y}px, 0) translate3d(-50%, -50%, 0)`;
+    ring.style.transform = `translate3d(${x}px, ${y}px, 0) translate3d(-50%, -50%, 0)`;
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+
+  const setHovering = (on) => document.body.classList.toggle("is-hovering", on);
+
+  document.addEventListener("mouseover", (e) => setHovering(isInteractive(e.target)), { passive: true });
+  document.addEventListener(
+    "focusin",
+    (e) => setHovering(isInteractive(e.target)),
+    { passive: true }
+  );
+  document.addEventListener("mouseout", () => setHovering(false), { passive: true });
+  document.addEventListener("focusout", () => setHovering(false), { passive: true });
+}
+
+function setupEasterEgg() {
+  const banner = qs(".easter");
+  if (!banner) return;
+
+  let clicks = [];
+  let confettiLock = false;
+
+  const showBanner = () => {
+    banner.hidden = false;
+    banner.classList.add("is-on");
+    window.setTimeout(() => banner.classList.remove("is-on"), 1500);
+    window.setTimeout(() => (banner.hidden = true), 1850);
+  };
+
+  const spawnConfetti = (x, y) => {
+    if (confettiLock) return;
+    confettiLock = true;
+
+    const colors = ["#FFB6C1", "#98DDCA", "#F0DCA5", "#FFD3A8", "#C7B299"];
+    const count = 60;
+
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement("div");
+      p.className = "confetti";
+      const size = 6 + Math.random() * 7;
+      const dx = (Math.random() - 0.5) * 240;
+      const dy = -120 - Math.random() * 220;
+      const rot = (Math.random() - 0.5) * 420;
+      const dur = 850 + Math.random() * 650;
+      p.style.left = `${x}px`;
+      p.style.top = `${y}px`;
+      p.style.width = `${size}px`;
+      p.style.height = `${size * (0.65 + Math.random() * 0.9)}px`;
+      p.style.background = colors[i % colors.length];
+      p.style.setProperty("--dx", `${dx}px`);
+      p.style.setProperty("--dy", `${dy}px`);
+      p.style.setProperty("--rot", `${rot}deg`);
+      p.style.animationDuration = `${dur}ms`;
+      document.body.appendChild(p);
+      window.setTimeout(() => p.remove(), dur + 60);
+    }
+
+    showBanner();
+    window.setTimeout(() => (confettiLock = false), 900);
+  };
+
+  document.addEventListener("click", (e) => {
+    if (isInteractive(e.target)) return;
+    const now = performance.now();
+    clicks = clicks.filter((t) => now - t < 1200);
+    clicks.push(now);
+    if (clicks.length >= 3) {
+      clicks = [];
+      spawnConfetti(e.clientX, e.clientY);
+    }
+  });
+}
+
+function setupAnchorSmoothScroll() {
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[href^='#']");
+    if (!a) return;
+    const hash = a.getAttribute("href");
+    if (!hash || hash === "#") return;
+    e.preventDefault();
+    safeScrollToHash(hash);
+    history.replaceState(null, "", hash);
+  });
+
+  if (location.hash) {
+    window.setTimeout(() => safeScrollToHash(location.hash), 80);
+  }
+}
+
+function injectConfettiCSS() {
+  const style = document.createElement("style");
+  style.textContent = `
+    .confetti{
+      position: fixed;
+      z-index: 60;
+      border-radius: 2px;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 14px 26px rgba(39, 33, 29, .12);
+      animation-name: confettiFly;
+      animation-timing-function: cubic-bezier(.12,.8,.22,1);
+      animation-fill-mode: both;
+      will-change: transform, opacity;
+    }
+    @keyframes confettiFly{
+      0%{ opacity: 0; transform: translate(-50%, -50%) translate3d(0,0,0) rotate(0deg); }
+      10%{ opacity: 1; }
+      100%{ opacity: 0; transform: translate(-50%, -50%) translate3d(var(--dx), var(--dy), 0) rotate(var(--rot)); }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function ready() {
+  document.body.classList.add("is-ready");
+}
+
+setupNav();
+setupAnchorSmoothScroll();
+setupMood();
+setupCarousel();
+setupSocialCopy();
+setupParallax();
+setupCustomCursor();
+injectConfettiCSS();
+setupEasterEgg();
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", ready, { once: true });
+} else {
+  ready();
+}
+
+
+## 这个小页面怎么用
+
+- **打开页面**
+  - 直接在资源管理器里双击 `index.html`，用浏览器打开即可（推荐 Chrome / Edge）。
+
+- **替换为你自己的照片**
+  - 把你的 16:9 横图放到 `assets/` 目录下（例如 `my-trip-1.jpg`）。
+  - 打开 `main.js`，在文件最上方的 `slides` 数组里，把
+    - `src: "./assets/slide-1.svg"` 改成你的图片路径，例如 `src: "./assets/my-trip-1.jpg"`；
+    - `alt` 改成图片描述（给屏幕阅读器用）；
+    - `caption` 改成你想显示在轮播下面的那句文案。
+  - 同理可以增减图片（`slides` 数组里多写或少写几项即可，轮播和小圆点会自动适配）。
+
+- **修改主文案与标题**
+  - 打开 `index.html`：
+    - 修改大标题：找到 `📸 镜头后的我，和你分享眼中的世界`；
+    - 修改副标题：找到 `some moments I cherish`；
+    - 修改“关于”和“联系”里的介绍文本与邮箱。
+
+- **修改社交媒体链接与用户名**
+  - 在 `index.html` 中搜索 `social-item`：
+    - 每个 `<a class="social-item">` 包含一个图标和一行用户名；
+    - 把 `href="https://github.com/"` 替换为你的主页链接；
+    - 把 `@yourgithub` / `@yourinsta` 等改成你自己的账号。
+  - 用户名上的 `data-copy="@yourgithub"` 会控制“复制账号”的内容，同步改为你的账号即可。
+
+- **调色和细节**
+  - 想调整整体配色，可以在 `styles.css` 顶部的 `:root` 中修改：
+    - `--bg`（背景米白）、`--text`（文字深灰）、`--accent`/`--accent2`（粉色和薄荷绿点缀）。
+  - 不想要自定义光标或彩带彩蛋，可以在 `main.js` 中删除或注释对应的 `setupCustomCursor()`、`setupEasterEgg()` 调用。
+
+
+:root{
+  --bg: #F9F5F0;
+  --text: #2E2E2E;
+  --muted: rgba(46,46,46,.66);
+  --muted2: rgba(46,46,46,.5);
+  --card: rgba(255,255,255,.55);
+  --card2: rgba(255,255,255,.35);
+  --line: rgba(46,46,46,.10);
+  --shadow: 0 18px 60px rgba(39, 33, 29, .16);
+  --shadow2: 0 10px 26px rgba(39, 33, 29, .12);
+  --r: 18px;
+  --accent: #FFB6C1;
+  --accent2: #98DDCA;
+  --focus: rgba(255, 182, 193, .55);
+  --max: 1120px;
+  --scrollY: 0px;
+}
+
+*{ box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+::selection{ background: rgba(152, 221, 202, .55); }
+
+a{ color: inherit; text-decoration: none; }
+button{ font-family: inherit; }
+
+.bg-parallax{
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(900px 420px at 18% 12%, rgba(255, 182, 193, .14), transparent 60%),
+    radial-gradient(680px 380px at 78% 18%, rgba(152, 221, 202, .14), transparent 62%),
+    radial-gradient(720px 520px at 60% 80%, rgba(239, 220, 182, .22), transparent 65%),
+    linear-gradient(180deg, rgba(255,255,255,.34), transparent 40%);
+  transform: translate3d(0, calc(var(--scrollY) * -0.06), 0);
+  transition: transform 120ms linear;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.topbar{
+  position: sticky;
+  top: 14px;
+  z-index: 20;
+  padding: 0 18px;
+}
+.topbar-inner{
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.38);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(39, 33, 29, .10);
+}
+
+.logo{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  outline: none;
+}
+.logo:focus-visible{ box-shadow: 0 0 0 4px var(--focus); }
+.logo-mark{
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255,182,193,.65), rgba(152,221,202,.55));
+  color: rgba(46,46,46,.92);
+  font-weight: 700;
+  letter-spacing: .5px;
+  box-shadow: 0 10px 20px rgba(39, 33, 29, .12);
+}
+.logo-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.logo-name{
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(46,46,46,.86);
+}
+.topbar-tagline{
+  margin-left: 28px;
+  margin-right: auto;
+  font-size: 15px;
+  letter-spacing: .08em;
+  color: rgba(46,46,46,.68);
+  white-space: nowrap;
+  align-self: center;
+}
+
+.nav{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.nav-link{
+  position: relative;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: rgba(46,46,46,.82);
+  outline: none;
+}
+.nav-link::after{
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 4px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(255,182,193,.92), rgba(152,221,202,.85));
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: .0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+.nav-link:hover::after{ transform: scaleX(1); opacity: 1; }
+.nav-link:focus-visible{ box-shadow: 0 0 0 4px var(--focus); }
+
+.nav-toggle{
+  display: none;
+  width: 44px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.42);
+  border-radius: 999px;
+  cursor: pointer;
+  outline: none;
+}
+.nav-toggle:focus-visible{ box-shadow: 0 0 0 4px var(--focus); }
+.nav-toggle-lines{
+  display: block;
+  width: 18px;
+  height: 12px;
+  margin: 0 auto;
+  position: relative;
+}
+.nav-toggle-lines::before,
+.nav-toggle-lines::after,
+.nav-toggle-lines{
+  background: transparent;
+}
+.nav-toggle-lines::before,
+.nav-toggle-lines::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(46,46,46,.7);
+}
+.nav-toggle-lines::before{ top: 1px; }
+.nav-toggle-lines::after{ bottom: 1px; }
+
+.page{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 18px 68px;
+}
+
+.hero{
+  padding-top: 46px;
+  padding-bottom: 18px;
+}
+.hero-inner{
+  position: relative;
+  padding: 42px 14px 18px;
+  text-align: center;
+}
+.title{
+  margin: 0;
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.16;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+}
+.subtitle{
+  margin: 12px 0 0;
+  font-family: Caveat, ui-rounded, "Comic Sans MS", system-ui, sans-serif;
+  font-size: clamp(16px, 2.1vw, 22px);
+  color: rgba(46,46,46,.62);
+  letter-spacing: .4px;
+}
+
+.hero-deco{
+  position: absolute;
+  top: 34px;
+  width: 70px;
+  height: 70px;
+  opacity: .9;
+  filter: blur(.2px);
+  pointer-events: none;
+}
+.hero-deco-left{
+  left: 12px;
+  background:
+    radial-gradient(circle at 30% 35%, rgba(255,182,193,.65) 0 18%, transparent 19% 100%),
+    radial-gradient(circle at 70% 68%, rgba(152,221,202,.65) 0 16%, transparent 17% 100%);
+}
+.hero-deco-right{
+  right: 12px;
+  background:
+    linear-gradient(90deg, rgba(46,46,46,.18) 0 0);
+}
+.hero-deco-right::before,
+.hero-deco-right::after{
+  content:"";
+  position:absolute;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(46,46,46,.14);
+}
+.hero-deco-right::before{ top: 18px; transform: rotate(-8deg); }
+.hero-deco-right::after{ top: 36px; transform: rotate(8deg); }
+
+.mood{
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.42);
+  box-shadow: 0 12px 30px rgba(39, 33, 29, .08);
+}
+.mood-pill{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255,182,193,.95), rgba(152,221,202,.9));
+}
+.mood-text{
+  font-size: 14px;
+  color: rgba(46,46,46,.74);
+}
+
+.carousel-section{ padding-top: 10px; }
+.carousel-shell{
+  --bg1: rgba(255, 182, 193, .18);
+  --bg2: rgba(152, 221, 202, .18);
+  width: min(80vw, var(--max));
+  margin: 10px auto 0;
+  position: relative;
+  border-radius: calc(var(--r) + 10px);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.carousel-bg{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 420px at 20% 20%, var(--bg1), transparent 62%),
+    radial-gradient(820px 520px at 78% 70%, var(--bg2), transparent 64%),
+    linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.18));
+  transition: background 700ms ease;
+}
+.carousel-card{
+  position: relative;
+  padding: 16px 16px 14px;
+  outline: none;
+}
+.carousel-card:focus-visible{
+  box-shadow: 0 0 0 4px var(--focus) inset;
+  border-radius: calc(var(--r) + 6px);
+}
+
+.carousel-media{
+  position: relative;
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--shadow2);
+  background: rgba(255,255,255,.55);
+  aspect-ratio: 16 / 9;
+}
+
+.slide-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--r);
+  transform: scale(1.02);
+  filter: saturate(1.02) contrast(1.02);
+  opacity: 0;
+}
+.slide-img-current{
+  opacity: 1;
+  transform: scale(1.0);
+}
+.carousel-shell.is-transitioning .slide-img-current{
+  opacity: .0;
+  transform: scale(1.02);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+.carousel-shell.is-transitioning .slide-img-next{
+  opacity: 1;
+  transform: scale(1.0);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
+.carousel-meta{
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+}
+.caption{
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(46,46,46,.62);
+  font-size: 14px;
+  transition: transform 220ms ease, color 220ms ease;
+}
+.caption-pin{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(46,46,46,.22);
+}
+.carousel-shell:hover .caption{
+  transform: translateY(-2px);
+  color: rgba(46,46,46,.72);
+}
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.26);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(46,46,46,.9);
+  cursor: pointer;
+  opacity: .62;
+  transition: opacity 160ms ease, transform 160ms ease, background 160ms ease;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 30px rgba(39, 33, 29, .10);
+}
+.arrow span{ font-size: 26px; line-height: 1; transform: translateY(-1px); }
+.arrow:hover{ opacity: .98; background: rgba(255,255,255,.40); transform: translateY(-50%) scale(1.04); }
+.arrow:focus-visible{ box-shadow: 0 0 0 4px var(--focus), 0 14px 30px rgba(39, 33, 29, .10); opacity: 1; }
+.arrow-left{ left: 12px; }
+.arrow-right{ right: 12px; }
+
+.dots{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 0 2px;
+}
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  background: rgba(46,46,46,.22);
+  opacity: .55;
+  transition: transform 180ms ease, opacity 180ms ease, background 180ms ease;
+}
+.dot[aria-selected="true"]{
+  transform: scale(1.45);
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(255,182,193,.92), rgba(152,221,202,.86));
+}
+.dot:focus-visible{ box-shadow: 0 0 0 4px var(--focus); }
+
+.like{
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.38);
+  background: rgba(255,255,255,.32);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  color: rgba(46,46,46,.92);
+  box-shadow: 0 14px 30px rgba(39, 33, 29, .10);
+  transition: transform 160ms ease, background 160ms ease, opacity 160ms ease;
+}
+.like:hover{ transform: scale(1.04); background: rgba(255,255,255,.42); }
+.like:focus-visible{ box-shadow: 0 0 0 4px var(--focus), 0 14px 30px rgba(39, 33, 29, .10); }
+.like-heart{
+  color: rgba(255, 105, 135, .95);
+  text-shadow: 0 8px 18px rgba(255, 105, 135, .25);
+  font-size: 16px;
+  transform: translateY(-.5px);
+}
+.like.is-popping .like-heart{ animation: heartPop 420ms ease; }
+.like-count{
+  font-size: 13px;
+  color: rgba(46,46,46,.70);
+  min-width: 16px;
+  text-align: right;
+}
+@keyframes heartPop{
+  0%{ transform: translateY(-.5px) scale(1); }
+  40%{ transform: translateY(-.5px) scale(1.25); }
+  65%{ transform: translateY(-.5px) scale(.92); }
+  100%{ transform: translateY(-.5px) scale(1); }
+}
+
+.section-title{
+  margin: 34px 0 14px;
+  font-size: 18px;
+  letter-spacing: .2px;
+  color: rgba(46,46,46,.84);
+  font-weight: 600;
+  text-align: center;
+}
+
+.social{
+  padding-top: 10px;
+}
+.social-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 32px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4px 0 0;
+}
+.social-item{
+  width: 120px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 12px 10px 10px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  outline: none;
+}
+.social-item:hover{
+  border-color: rgba(46,46,46,.08);
+  background: rgba(255,255,255,.26);
+  box-shadow: 0 18px 40px rgba(39, 33, 29, .08);
+}
+.social-item:focus-visible{ box-shadow: 0 0 0 4px var(--focus); }
+.social-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.44);
+  border: 1px solid rgba(46,46,46,.08);
+  box-shadow: 0 12px 24px rgba(39, 33, 29, .10);
+  transition: transform 180ms ease, filter 180ms ease;
+  color: rgba(46,46,46,.56);
+}
+.social-icon svg{
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+.social-handle{
+  font-size: 13px;
+  color: rgba(46,46,46,.62);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 160ms ease, color 160ms ease;
+  cursor: copy;
+}
+.social-item:hover .social-handle{
+  border-bottom-color: rgba(46,46,46,.26);
+  color: rgba(46,46,46,.74);
+}
+.social-item:hover .social-icon{
+  transform: scale(1.08);
+  animation: iconBounce 420ms cubic-bezier(.2,.9,.2,1.1);
+}
+@keyframes iconBounce{
+  0%{ transform: scale(1.0); }
+  50%{ transform: scale(1.12); }
+  100%{ transform: scale(1.08); }
+}
+
+[data-brand="douyin"]:hover .social-icon{ color: #fe2c55; }
+[data-brand="xiaohongshu"]:hover .social-icon{ color: #ff2442; }
+[data-brand="weibo"]:hover .social-icon{ color: #e6162d; }
+[data-brand="netease"]:hover .social-icon{ color: #d33a31; }
+
+.toast{
+  margin: 18px auto 0;
+  width: fit-content;
+  max-width: 92vw;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(46,46,46,.10);
+  background: rgba(255,255,255,.50);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(46,46,46,.76);
+  font-size: 13px;
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+.toast.is-on{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info{
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(46,46,46,.08);
+  background: rgba(255,255,255,.30);
+  box-shadow: 0 18px 50px rgba(39, 33, 29, .08);
+}
+.info-text{
+  margin: 0;
+  color: rgba(46,46,46,.70);
+  line-height: 1.72;
+  font-size: 14px;
+  text-align: center;
+}
+.inline-link{
+  color: rgba(46,46,46,.86);
+  border-bottom: 1px solid rgba(46,46,46,.28);
+  padding-bottom: 1px;
+}
+.inline-link:hover{ border-bottom-color: rgba(255,182,193,.92); }
+.inline-link:focus-visible{ box-shadow: 0 0 0 4px var(--focus); border-radius: 6px; }
+
+.footer{
+  max-width: var(--max);
+  margin: 14px auto 40px;
+  padding: 18px 18px 36px;
+  text-align: center;
+  color: rgba(46,46,46,.38);
+  font-size: 12px;
+}
+.sep{ opacity: .5; padding: 0 6px; }
+
+.easter{
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.56);
+  border: 1px solid rgba(46,46,46,.10);
+  box-shadow: 0 18px 50px rgba(39, 33, 29, .14);
+  color: rgba(46,46,46,.78);
+  font-size: 13px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+.easter.is-on{
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.cursor-dot, .cursor-ring{
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0;
+}
+.cursor-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(46,46,46,.55);
+  transform: translate3d(-50%, -50%, 0);
+}
+.cursor-ring{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(46,46,46,.22);
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 160ms ease, height 160ms ease, border-color 160ms ease, opacity 160ms ease;
+}
+body.has-custom-cursor .cursor-dot,
+body.has-custom-cursor .cursor-ring{ opacity: 1; }
+body.is-hovering .cursor-ring{
+  width: 44px;
+  height: 44px;
+  border-color: rgba(255,182,193,.55);
+}
+
+[data-reveal]{
+  opacity: 0;
+  transform: translateY(10px);
+}
+body.is-ready [data-reveal]{
+  animation: riseIn 600ms cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes riseIn{
+  from{ opacity: 0; transform: translateY(10px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+  .bg-parallax{ transform: none !important; }
+}
+
+@media (max-width: 980px){
+  .carousel-shell{ width: min(95vw, var(--max)); }
+}
+
+@media (max-width: 700px){
+  .topbar{ top: 10px; }
+  .nav-toggle{ display: inline-grid; place-items: center; }
+  .topbar-tagline{ display: none; }
+  .nav{
+    position: absolute;
+    right: 18px;
+    top: 64px;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(46,46,46,.10);
+    background: rgba(255,255,255,.56);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 18px 50px rgba(39, 33, 29, .14);
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 140px;
+  }
+  body.menu-open .nav{ display: flex; }
+  .hero-inner{ padding-top: 28px; }
+
+  .arrow{
+    top: auto;
+    bottom: 12px;
+    transform: none;
+  }
+  .arrow:hover{ transform: scale(1.04); }
+  .arrow-left{ left: 14px; }
+  .arrow-right{ right: 14px; }
+
+  .social-item{ width: 104px; }
+}
+
